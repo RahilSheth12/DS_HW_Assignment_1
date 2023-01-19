@@ -1,30 +1,16 @@
-'''
-3. Multiples of 3 or 5
-If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these
-multiples is 23. We are looking for a method that given a positive integer 𝑛, it finds the sum of all the multiples
-of 3 or 5 below 𝑛.
-a) Implement this method.
-b) Print out the results on the following inputs to see whether your method gives you what you expect:
-i. 5
-ii. 10
-iii. 500 (it should return 57918)
-iv. 1000 (it should return 233168)
-v. 333
-'''
-from typing import List
+# 1. Palindrome Number
+
+def PalindromeChecker(self, x: int):
+    return str(x)[::-1] == str(x)
 
 
-def multiplesOf3or5(x: int):
-    multiple_sum = 0
-    for i in range(x - 1, 0, -1):
-        if i % 3 == 0 or i % 5 == 0:
-            multiple_sum += i
-    return multiple_sum
+# print(PalindromeChecker(0))
+# print(PalindromeChecker(-121))
+# print(PalindromeChecker(121))
+# print(PalindromeChecker(2147447412))
+# print(PalindromeChecker(12345432))
 
-
-# print(multiplesOf3or5(333))
-
-
+# 2. Remove Duplicates from Sorted Array
 def removeDupes(nums):
     if len(nums) == 1:
         return nums
@@ -42,6 +28,26 @@ def removeDupes(nums):
 
 
 # print(removeDupes([0,0,0]))
+# print(removeDupes([1,1,2]))
+# print(removeDupes([-5, -5, -3, -3, -1, -1]))
+# print(removeDupes([0, 1, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 100]))
+# print(removeDupes([-10, -10, -10, -10, -10, -10, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4]))
+
+
+# 3. Multiples of 3 or 5
+def multiplesOf3or5(x: int):
+    multiple_sum = 0
+    for i in range(x - 1, 0, -1):
+        if i % 3 == 0 or i % 5 == 0:
+            multiple_sum += i
+    return multiple_sum
+
+
+# print(multiplesOf3or5(5))
+# print(multiplesOf3or5(10))
+# print(multiplesOf3or5(500))
+# print(multiplesOf3or5(1000))
+# print(multiplesOf3or5(333))
 
 
 '''
@@ -65,6 +71,7 @@ ii. “Academic Calendar\nAcademic Programs- Graduate\nAcademic Programs- Underg
 '''
 
 
+# 4. Number of Words
 def numOfWords(x: str):
     # wordCounter = 1
     # for i in x:
